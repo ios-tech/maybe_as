@@ -5,3 +5,7 @@
 * example added
 ## 0.0.3
 * Object changed to dynamic
+## 0.0.4
+* 
+## 0.0.5
+* readme changed
