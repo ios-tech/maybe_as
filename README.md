@@ -13,10 +13,13 @@ object != null ? object : "test"
 # Example
 
 "1".maybeAs<String>() // -> "1"
-1.maybeAs<String> // -> null
+
+1.maybeAs<String>() // -> null
 
 "1".maybeAsOr<int>(0) // -> 0
+
 1.maybeAsOr<String>("0") // -> "0"
 
 it also works with null
+
 null.maybeAsOr<String>("test) // -> test
