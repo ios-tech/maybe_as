@@ -20,8 +20,10 @@ void main() {
     expect(null.maybeAs<int>(), null);
     expect(null.maybeAsOr<int>(0), 0);
     expect(null.maybeAsOr<String>("string"), "string");
-    String? variable;
-    expect(variable.maybeAsOr<String>("string"), "string");
+    String? string;
+    expect(string.maybeAsOr<String>("string"), "string");
+    int? integer;
+    expect(integer.maybeAsOr<int>(9), 9);
   });
 
   test('custom class', () {
