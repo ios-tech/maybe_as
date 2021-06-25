@@ -3,7 +3,7 @@
 Optional as. 
 maybeAs returns the current object if the type is the same and null otherwise <br />
 maybeAsOr returns the current object or default value <br />
-so it safe to use on dynamic fields and avoid constructions like this: 
+so it safe to use and avoid constructions like this: 
 ```
 dynamic object = 1; 
 object is String ? object : null; 
@@ -20,7 +20,7 @@ import 'package:maybe_as/maybe_as.dart';
 "1".maybeAsOr<int>(0) // -> 0
 1.maybeAsOr<String>("0") // -> "0"<br/>
 ```
-it also works with null<br />
+it also works with null, but now the type of var should not be dynamic<br />
 ```
 null.maybeAsOr<String>("test") // -> test
 ```
