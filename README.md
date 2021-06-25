@@ -1,13 +1,13 @@
 # Info
 
 Optional as. 
-maybeAs returns the current object if the type is the same and null otherwise
-maybeAsOr returns the current object or default value
-so it safe to use on dynamic fields and avoid constructions like this
-dynamic object = 1;
-object is String ? object : null;
-object is String ? object :  "test";
-object != null ? object : "test"
+maybeAs returns the current object if the type is the same and null otherwise <br />
+maybeAsOr returns the current object or default value <br />
+so it safe to use on dynamic fields and avoid constructions like this <br /> <br />
+dynamic object = 1; <br />
+object is String ? object : null; <br />
+object is String ? object :  "test"; <br />
+object != null ? object : "test" <br />
 
 
 # Example
