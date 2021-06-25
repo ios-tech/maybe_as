@@ -1,7 +1,8 @@
 name: maybe_as
 description: "Optional as. Returns null if type if not match the class type."
 version: 0.0.1
-homepage:
+homepage: https://github.com/ios-tech/maybe_as
+repository: https://github.com/ios-tech/maybe_as
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
