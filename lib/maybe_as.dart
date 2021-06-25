@@ -1,6 +1,6 @@
 library maybe_as;
 
-extension MaybeAsObject on Object {
+extension MaybeAsDynamic on dynamic {
   /// returns null if object not same type of [T] else return current instance
   T? maybeAs<T>() {
     if (this is T) return this as T;

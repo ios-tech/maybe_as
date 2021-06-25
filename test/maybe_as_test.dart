@@ -2,6 +2,8 @@ import 'package:flutter_test/flutter_test.dart';
 
 import 'package:maybe_as/maybe_as.dart';
 
+import 'test_class.dart';
+
 void main() {
   test('optional value', () {
     final object = "string";
@@ -18,5 +20,15 @@ void main() {
     expect(null.maybeAs<int>(), null);
     expect(null.maybeAsOr<int>(0), 0);
     expect(null.maybeAsOr<String>("string"), "string");
+    String? variable;
+    expect(variable.maybeAsOr<String>("string"), "string");
+  });
+
+  test('custom class', () {
+    expect(TestClass(0).maybeAs<int>(), null);
+    expect(TestClass(0).maybeAs<TestClass2>(), null);
+    expect(TestClass(0).maybeAs<TestClass3>(), null);
+    final c = TestClass3(0);
+    expect(c.maybeAs<TestClass3>(), c);
   });
 }
