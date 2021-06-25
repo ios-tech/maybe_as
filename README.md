@@ -23,4 +23,9 @@ import 'package:maybe_as/maybe_as.dart';
 it also works with null, but now the type of var should not be dynamic<br />
 ```
 null.maybeAsOr<String>("test") // -> test
+String? string;
+string.maybeAsOr<String>("string"); // -> "string"
+
+dynamic dvar;
+dvar.maybeAsOr<String>("string"); //exception
 ```
