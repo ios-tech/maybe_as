@@ -11,6 +11,7 @@ so it safe to use on dynamic fields and avoid constructions like this <br /> <br
 
 
 # Example
+> import 'package:maybe_as/maybe_as.dart';
 
 > "1".maybeAs\<String\>() // -> "1"
 
