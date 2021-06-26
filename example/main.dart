@@ -1,12 +1,11 @@
 import 'package:maybe_as/maybe_as.dart';
 
 void main() {
-  final object = "string";
-  print(object.maybeAs<String>());
+  dynamic object;
+  object = 1;
+  print((object as Object).maybeAs<String>());
+  object = "string";
   print(object.maybeAs<int>());
   print("1,2,3".maybeAsOr<String>("").split(","));
   print(1.maybeAsOr<String>("").split(","));
-  print(null.maybeAs<int>());
-  print(null.maybeAsOr<int>(0));
-  print(null.maybeAsOr<String>("string"));
 }

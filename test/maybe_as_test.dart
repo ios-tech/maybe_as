@@ -16,21 +16,16 @@ void main() {
     expect(1.maybeAsOr<String>("").split(","), [""]);
   });
 
-  test('null', () {
-    expect(null.maybeAs<int>(), null);
-    expect(null.maybeAsOr<int>(0), 0);
-    expect(null.maybeAsOr<String>("string"), "string");
-    String? string;
-    expect(string.maybeAsOr<String>("string"), "string");
-    int? integer;
-    expect(integer.maybeAsOr<int>(9), 9);
-  });
-
   test('custom class', () {
     expect(TestClass(0).maybeAs<int>(), null);
     expect(TestClass(0).maybeAs<TestClass2>(), null);
     expect(TestClass(0).maybeAs<TestClass3>(), null);
     final c = TestClass3(0);
     expect(c.maybeAs<TestClass3>(), c);
+    dynamic test;
+    test = 1;
+    expect((test as Object).maybeAsOr<String>("string"), "string");
+    test = "str";
+    expect(test.maybeAsOr<String>("string"), "str");
   });
 }
